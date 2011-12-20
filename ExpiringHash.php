@@ -68,7 +68,9 @@ class ExpiringHash
      */
     public function validate($data, $asOfString = NULL)
     {
-        list($hashExpiryString, $hash) = explode('.', $data);
+        $hashChunks = explode('.', $data);
+        if (count($hashChunks) !== 2) return self::STATUS_TAMPERED;
+        list($hashExpiryString, $hash) = $hashChunks;
         if (!$hashExpiryString) return self::STATUS_TAMPERED;
         if (!$hash) return self::STATUS_TAMPERED;
 

@@ -6,7 +6,7 @@ $spec = Pearfarm_PackageSpec::create(array(Pearfarm_PackageSpec::OPT_BASEDIR => 
              ->setChannel('apinstein.pearfarm.org')
              ->setSummary('Generate tamper-proof, human-readable, hashes for implementing expiring URLs.')
              ->setDescription('Generate tamper-proof, human-readable, hashes for implementing expiring URLs.')
-             ->setReleaseVersion('0.0.1')
+             ->setReleaseVersion('0.0.2')
              ->setReleaseStability('stable')
              ->setApiVersion('0.0.1')
              ->setApiStability('stable')
